@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check if `rostopic` command is available
+if ! command -v rostopic &> /dev/null; then
+    echo "Error: 'rostopic' command not found. Please ensure that ROS is installed and sourced correctly."
+    exit 1
+fi
+
 # Check if a topic name was provided
 if [ -z "$1" ]; then
     echo "Usage: $0 <topic_name>"
