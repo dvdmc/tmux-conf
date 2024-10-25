@@ -18,4 +18,4 @@ windows:
     - roscore
   - rviz:
     - source devel/setup.bash
-    - rosrun rviz rviz # -d src/mr-coord/cfg/rviz.rviz
+    - ./waitTopic rosout && rosrun rviz rviz # -d src/mr-coord/cfg/rviz.rviz
